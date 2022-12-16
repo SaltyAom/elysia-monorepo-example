@@ -2,8 +2,6 @@ import { Elysia, t } from 'elysia'
 import { cors } from '@elysiajs/cors'
 import { staticPlugin } from '@elysiajs/static'
 
-let host = ''
-
 const app = new Elysia()
     .use(cors())
     .use(staticPlugin({
@@ -15,7 +13,7 @@ const app = new Elysia()
         name: 'Skadi',
         type: 'Nendoroid',
         manufacture: 'Goodsmile',
-        cover: `${host}/assets/skadi.jpg`,
+        cover: `http://localhost:3000/assets/skadi.jpg`,
         license: {
             type: 'approved',
             holder: 'Hypergraph',
@@ -30,9 +28,7 @@ const app = new Elysia()
             })
         }
     })
-    .listen(3000, ({ hostname, port }) => {
-        host = `http://${hostname}:${port}`
-    })
+    .listen(3000)
 
 export type App = typeof app
 
