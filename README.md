@@ -1,6 +1,8 @@
 # Elysia / Eden Turborepo
 Example of using mono-repo to sync data between Elysia and frontend framework using Eden connector.
 
+![elysia-mono](https://user-images.githubusercontent.com/35027979/208130428-ac0ec4ae-3a67-4550-b312-213b2937dbe5.png)
+
 Backend:
 - apps/backend (port: 3000) - Elysia
 
