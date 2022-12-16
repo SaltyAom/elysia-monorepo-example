@@ -1,15 +1,21 @@
 import { Elysia, t } from 'elysia'
 import { cors } from '@elysiajs/cors'
+import { staticPlugin } from '@elysiajs/static'
+
+let host = ''
 
 const app = new Elysia()
     .use(cors())
+    .use(staticPlugin({
+        prefix: ''
+    }))
     .get('/', () => 'Hello Elysia')
     .get('/nendoroid/skadi', () => ({
         id: 1895,
         name: 'Skadi',
         type: 'Nendoroid',
         manufacture: 'Goodsmile',
-        cover: 'https://inwfile.com/s-dv/mt1la9.jpg',
+        cover: `${host}/assets/skadi.jpg`,
         license: {
             type: 'approved',
             holder: 'Hypergraph',
@@ -24,7 +30,9 @@ const app = new Elysia()
             })
         }
     })
-    .listen(3001)
+    .listen(3000, ({ hostname, port }) => {
+        host = `http://${hostname}:${port}`
+    })
 
 export type App = typeof app
 

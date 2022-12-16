@@ -2,12 +2,12 @@
 Example of using mono-repo to sync data between Elysia and frontend framework using Eden connector.
 
 Backend:
-- apps/backend - Elysia
+- apps/backend (port: 3000) - Elysia
 
 Frontend:
-- apps/react - Next
-- apps/vue - Nuxt
-- apps/svelte - SvelteKit
+- apps/react (port: 3001) - Next
+- apps/svelte (port: 3002) - SvelteKit
+- apps/vue (port: 3003) - Nuxt
 
 Utility:
 - packages/libs - Eden connector
