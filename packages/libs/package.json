@@ -7,14 +7,16 @@
   "scripts": {
     "lint": "eslint *.ts*"
   },
+  "dependencies": {
+    "@elysiajs/eden": "^0.2.0-rc.3"
+  },
   "devDependencies": {
-    "@elysiajs/eden": "^0.1.0-rc.6",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "backend": "workspace:*",
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
-    "elysia": "^0.1.0-rc.8",
+    "elysia": "^0.1.2",
     "react": "^18.2.0",
     "tsconfig": "workspace:*",
     "typescript": "^4.5.2"

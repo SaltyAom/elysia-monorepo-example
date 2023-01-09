@@ -31,7 +31,7 @@
 <script lang="ts" setup>
 import { api } from 'libs'
 
-const { id, name, cover, type, license } = await api.nendoroid.skadi.GET()
+const { id, name, cover, type, license } = await api.nendoroid.skadi.get()
 </script>
 
 <style>

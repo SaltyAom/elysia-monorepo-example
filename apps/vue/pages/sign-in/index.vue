@@ -75,7 +75,7 @@ const signInSchema = z.object({
 const formatError = ({ path, message }: ZodIssue) =>
     `${path} ${message.slice(message.indexOf(' '))}`
 
-const result = ref<Awaited<ReturnType<typeof api.signIn.POST>> | null>(null)
+const result = ref<Awaited<ReturnType<typeof api.signIn.post>> | null>(null)
 
 const form = ref({
     username: '',
@@ -85,7 +85,7 @@ const error = ref('')
 
 const signIn = async () => {
     try {
-        result.value = await api.signIn.POST(signInSchema.parse(form.value))
+        result.value = await api.signIn.post(signInSchema.parse(form.value))
     } catch (err) {
         error.value = formatError((err as ZodError).issues[0])
     }

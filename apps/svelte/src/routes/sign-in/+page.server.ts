@@ -21,7 +21,7 @@ export const actions: Actions = {
                 error: 'password is required'
             })
 
-        const res = await api.signIn.POST({
+        const res = await api.signIn.post({
             username,
             password
         })

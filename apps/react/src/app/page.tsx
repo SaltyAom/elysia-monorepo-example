@@ -1,7 +1,7 @@
-import { api } from '../../../../packages/libs/src'
+import { api } from 'libs'
 
 export default async function Page() {
-    const { id, name, cover, type, license } = await api.nendoroid.skadi.GET()
+    const { id, name, cover, type, license } = await api.nendoroid.skadi.get()
 
     return (
         <main className="flex justify-center items-center w-full min-h-screen">

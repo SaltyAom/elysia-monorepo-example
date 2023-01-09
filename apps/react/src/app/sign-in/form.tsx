@@ -1,12 +1,11 @@
 'use client'
 
-import type { FormEvent } from 'react'
-
 import Link from 'next/link'
 
 import { useForm } from 'react-hook-form'
-import { useMutation, useQuery } from 'react-query'
-import { z, ZodError, type ZodIssue } from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useMutation } from 'react-query'
+import { z } from 'zod'
 
 import { api } from 'libs'
 
@@ -17,19 +16,18 @@ const signInSchema = z.object({
 
 type SignInSchema = z.infer<typeof signInSchema>
 
-const formatError = ({ path, message }: ZodIssue) =>
-    `${path} ${message.slice(message.indexOf(' '))}`
-
 export default function Form() {
-    const { register, handleSubmit } = useForm<SignInSchema>()
+    const {
+        register, handleSubmit, formState: { errors: formError }
+    } = useForm<SignInSchema>({
+        resolver: zodResolver(signInSchema)
+    })
     const {
         mutate,
         isLoading,
-        error,
+        error: apiError,
         data: user
-    } = useMutation<SignInSchema, Error | ZodError, SignInSchema>((data) =>
-        api.signIn.POST(signInSchema.parse(data))
-    )
+    } = useMutation(api.signIn.post)
 
     if (user)
         return (
@@ -60,12 +58,18 @@ export default function Form() {
                     Username
                 </label>
                 <input
+                    required
                     id="username"
                     placeholder="username"
                     className="text-lg bg-gray-100 rounded px-3 py-1.5"
-                    required
+                    min={5}
                     {...register('username')}
                 />
+                {formError.username && (
+                    <p className="text-red-500">
+                        {formError.username?.message}
+                    </p>
+                )}
             </div>
 
             <div className="flex flex-col gap-1">
@@ -73,22 +77,30 @@ export default function Form() {
                     Password
                 </label>
                 <input
+                    required
                     id="password"
                     type="password"
                     placeholder="password"
                     className="text-lg bg-gray-100 rounded px-3 py-1.5"
-                    required
+                    min={5}
                     {...register('password')}
                 />
+                {formError.password && (
+                    <p className="text-red-500">
+                        {formError.password?.message}
+                    </p>
+                )}
             </div>
 
-            {error && (
-                <p className="text-red-500">
-                    {error instanceof ZodError
-                        ? formatError(error.errors[0])
-                        : error.message}
-                </p>
-            )}
+            <>
+                {apiError && (
+                    <p className="text-red-500">
+                        {apiError && apiError instanceof Error
+                            ? apiError.message
+                            : apiError.toString()}
+                    </p>
+                )}
+            </>
 
             <button
                 disabled={isLoading}
