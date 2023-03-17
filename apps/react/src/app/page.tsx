@@ -1,7 +1,11 @@
 import { api } from 'libs'
 
 export default async function Page() {
-    const { id, name, cover, type, license } = await api.nendoroid.skadi.get()
+    const { data, error } = await api.nendoroid.skadi.get()
+
+    if (error) return <h1>Something went wrong</h1>
+
+    const { id, name, cover, type, license } = data
 
     return (
         <main className="flex justify-center items-center w-full min-h-screen">

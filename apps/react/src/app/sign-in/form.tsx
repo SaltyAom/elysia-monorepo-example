@@ -18,24 +18,29 @@ type SignInSchema = z.infer<typeof signInSchema>
 
 export default function Form() {
     const {
-        register, handleSubmit, formState: { errors: formError }
+        register,
+        handleSubmit,
+        formState: { errors: formError }
     } = useForm<SignInSchema>({
         resolver: zodResolver(signInSchema)
     })
     const {
         mutate,
         isLoading,
-        error: apiError,
-        data: user
-    } = useMutation(api.signIn.post)
+        data: fetched
+    } = useMutation(api['sign-in'].post)
 
-    if (user)
+    if (fetched?.data) {
+        const {
+            data: { username }
+        } = fetched
+
         return (
             <main className="flex flex-col justify-center max-w-xs m-auto min-h-screen gap-6">
                 <p className="text-center text-2xl font-light text-gray-500">
                     Welcome back,{' '}
                     <span className="text-gray-700 font-normal">
-                        {user?.username ?? 'User'}
+                        {username ?? 'User'}
                     </span>
                 </p>
 
@@ -47,6 +52,7 @@ export default function Form() {
                 </Link>
             </main>
         )
+    }
 
     return (
         <form
@@ -93,12 +99,8 @@ export default function Form() {
             </div>
 
             <>
-                {apiError && (
-                    <p className="text-red-500">
-                        {apiError && apiError instanceof Error
-                            ? apiError.message
-                            : apiError.toString()}
-                    </p>
+                {fetched?.error && (
+                    <p className="text-red-500">{fetched.error.value}</p>
                 )}
             </>
 

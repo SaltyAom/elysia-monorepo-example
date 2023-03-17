@@ -25,7 +25,12 @@ const app = new Elysia()
             body: t.Object({
                 username: t.String(),
                 password: t.String()
+            }),
+            response: t.Object({
+                username: t.String(),
+                password: t.String()
             })
+
         }
     })
     .listen(3000)

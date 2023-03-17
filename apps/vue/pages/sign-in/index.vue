@@ -1,12 +1,12 @@
 <template>
     <main
-        v-if="result !== null"
+        v-if="result && result?.data !== null"
         class="flex flex-col justify-center max-w-xs m-auto min-h-screen gap-6"
     >
         <p class="text-center text-2xl font-light text-gray-500">
             Welcome back,
             <span class="text-gray-700 font-normal">
-                {{ result.username }}
+                {{ result!.data.username }}
             </span>
         </p>
 
@@ -51,6 +51,9 @@
         <p v-if="error" class="text-red-500">
             {{ error }}
         </p>
+        <p v-if="result?.error" class="text-red-500">
+            {{ result.error }}
+        </p>
 
         <button
             type="submit"
@@ -75,7 +78,9 @@ const signInSchema = z.object({
 const formatError = ({ path, message }: ZodIssue) =>
     `${path} ${message.slice(message.indexOf(' '))}`
 
-const result = ref<Awaited<ReturnType<typeof api.signIn.post>> | null>(null)
+const result = ref<Awaited<ReturnType<(typeof api)['sign-in']['post']>> | null>(
+    null
+)
 
 const form = ref({
     username: '',
@@ -85,7 +90,7 @@ const error = ref('')
 
 const signIn = async () => {
     try {
-        result.value = await api.signIn.post(signInSchema.parse(form.value))
+        result.value = await api['sign-in'].post(signInSchema.parse(form.value))
     } catch (err) {
         error.value = formatError((err as ZodError).issues[0])
     }

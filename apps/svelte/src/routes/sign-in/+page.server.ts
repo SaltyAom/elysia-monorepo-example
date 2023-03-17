@@ -4,30 +4,36 @@ import { api } from 'libs'
 
 export const actions: Actions = {
     default: async ({ request }) => {
-        const data = await request.formData()
+        const form = await request.formData()
 
-        const username = data.get('username') as string
-        const password = data.get('password') as string
+        const username = form.get('username') as string
+        const password = form.get('password') as string
 
         if (!username)
-            fail(400, {
+            return fail(400, {
                 success: false,
                 error: 'username is requried'
             })
 
         if (!password)
-            fail(400, {
+            return fail(400, {
                 success: false,
                 error: 'password is required'
             })
 
-        const res = await api.signIn.post({
+        const { data, error } = await api['sign-in'].post({
             username,
             password
         })
 
+        if (error)
+            fail(400, {
+                success: false,
+                error: error.value
+            })
+
         return {
-            ...res,
+            ...data,
             success: true,
             error: ''
         }
