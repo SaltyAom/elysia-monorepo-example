@@ -10,6 +10,7 @@
     "@elysiajs/cors": "^0.6.0",
     "@elysiajs/static": "^0.6.0",
     "@elysiajs/swagger": "^0.6.1",
+    "@sinclair/typebox": "^0.31.14",
     "elysia": "^0.6.19"
   },
   "devDependencies": {
