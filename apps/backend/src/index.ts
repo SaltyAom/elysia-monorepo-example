@@ -1,12 +1,16 @@
 import { Elysia, t } from 'elysia'
 import { cors } from '@elysiajs/cors'
 import { staticPlugin } from '@elysiajs/static'
+import { swagger } from '@elysiajs/swagger'
 
 const app = new Elysia()
     .use(cors())
-    .use(staticPlugin({
-        prefix: ''
-    }))
+    .use(swagger())
+    .use(
+        staticPlugin({
+            prefix: ''
+        })
+    )
     .get('/', () => 'Hello Elysia')
     .get('/nendoroid/skadi', () => ({
         id: 1895,
@@ -21,16 +25,20 @@ const app = new Elysia()
         }
     }))
     .post('/sign-in', ({ body }) => body, {
-        schema: {
-            body: t.Object({
+        body: t.Object({
+            username: t.String(),
+            password: t.String(),
+            a: t.Number()
+        }),
+        response: {
+            200: t.Object({
                 username: t.String(),
                 password: t.String()
             }),
-            response: t.Object({
-                username: t.String(),
-                password: t.String()
+            400: t.Object({
+                error: t.String(),
+                status: t.Number()
             })
-
         }
     })
     .listen(3000)

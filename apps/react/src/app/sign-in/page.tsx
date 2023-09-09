@@ -1,4 +1,4 @@
-import { api } from '../../../../../packages/libs/src'
+import { api } from 'libs'
 
 import Form from './form'
 

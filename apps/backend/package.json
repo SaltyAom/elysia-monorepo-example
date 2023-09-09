@@ -4,17 +4,19 @@
   "main": "./src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --hot src/index.ts"
+    "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
-    "@elysiajs/cors": "^0.3.0",
-    "@elysiajs/static": "^0.3.0",
-    "elysia": "^0.3.1"
+    "@elysiajs/cors": "^0.6.0",
+    "@elysiajs/static": "^0.6.0",
+    "@elysiajs/swagger": "^0.6.1",
+    "elysia": "^0.6.19"
   },
   "devDependencies": {
-    "bun-types": "^0.5.7"
+    "@types/node": "^18.16.0",
+    "bun-types": "^1.0.1"
   },
-  "module": "src/index.js",
+  "module": "src/index.ts",
   "bun-create": {
     "start": "bun run src/index.ts"
   }
