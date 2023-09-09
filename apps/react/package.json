@@ -27,7 +27,7 @@
     "autoprefixer": "^10.4.13",
     "eslint": "7.32.0",
     "eslint-config-custom": "workspace:*",
-    "postcss": "^8.4.20",
+    "postcss": "^8.4.21",
     "tailwindcss": "^3.2.4",
     "tsconfig": "workspace:*",
     "typescript": "^4.5.3"

@@ -8,7 +8,7 @@
     "lint": "eslint *.ts*"
   },
   "dependencies": {
-    "@elysiajs/eden": "0.5.2"
+    "@elysiajs/eden": "0.6.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
