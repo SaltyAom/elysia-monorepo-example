@@ -27,8 +27,7 @@ const app = new Elysia()
     .post('/sign-in', ({ body }) => body, {
         body: t.Object({
             username: t.String(),
-            password: t.String(),
-            a: t.Number()
+            password: t.String()
         }),
         response: {
             200: t.Object({
