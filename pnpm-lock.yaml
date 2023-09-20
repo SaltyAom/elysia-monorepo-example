@@ -22,27 +22,27 @@ importers:
   apps/backend:
     dependencies:
       '@elysiajs/cors':
-        specifier: ^0.6.0
-        version: 0.6.0(elysia@0.6.19)
+        specifier: ^0.7.0
+        version: 0.7.0(elysia@0.7.2)
       '@elysiajs/static':
-        specifier: ^0.6.0
-        version: 0.6.0(elysia@0.6.19)
+        specifier: ^0.7.0
+        version: 0.7.0(elysia@0.7.2)
       '@elysiajs/swagger':
-        specifier: ^0.6.1
-        version: 0.6.1(elysia@0.6.19)
+        specifier: ^0.7.1
+        version: 0.7.1(elysia@0.7.2)
       '@sinclair/typebox':
-        specifier: ^0.31.14
-        version: 0.31.14
+        specifier: ^0.31.15
+        version: 0.31.15
       elysia:
-        specifier: ^0.6.19
-        version: 0.6.19(@sinclair/typebox@0.31.14)
+        specifier: ^0.7.2
+        version: 0.7.2(@sinclair/typebox@0.31.15)
     devDependencies:
       '@types/node':
         specifier: ^18.16.0
         version: 18.16.0
       bun-types:
-        specifier: ^1.0.1
-        version: 1.0.1
+        specifier: ^1.0.2
+        version: 1.0.2
 
   apps/react:
     dependencies:
@@ -213,7 +213,7 @@ importers:
         version: 8.5.0(eslint@7.32.0)
       eslint-config-turbo:
         specifier: latest
-        version: 1.10.2(eslint@7.32.0)
+        version: 1.10.14(eslint@7.32.0)
       eslint-plugin-react:
         specifier: 7.31.8
         version: 7.31.8(eslint@7.32.0)
@@ -225,8 +225,8 @@ importers:
   packages/libs:
     dependencies:
       '@elysiajs/eden':
-        specifier: 0.6.1
-        version: 0.6.1(elysia@0.6.19)
+        specifier: 0.7.0
+        version: 0.7.0(elysia@0.7.2)
     devDependencies:
       '@types/react':
         specifier: ^18.0.17
@@ -238,8 +238,8 @@ importers:
         specifier: workspace:*
         version: link:../../apps/backend
       elysia:
-        specifier: 0.6.19
-        version: 0.6.19(typescript@5.2.2)
+        specifier: 0.7.2
+        version: 0.7.2(typescript@5.2.2)
       eslint:
         specifier: ^7.32.0
         version: 7.32.0
@@ -621,42 +621,43 @@ packages:
       mime: 3.0.0
     dev: true
 
-  /@elysiajs/cors@0.6.0(elysia@0.6.19):
-    resolution: {integrity: sha512-TpkdYRVDLJYn9XHwO3eFu1GG1/p1xZMcujU354N0YG5pbFNy5kSeKFDZRMoh14fPvkRN7tWgRpsZfuCs15IHKA==}
+  /@elysiajs/cors@0.7.0(elysia@0.7.2):
+    resolution: {integrity: sha512-BOR7FyIdE5WE+LzFBSOY/yTnl8+56UiIaSanQr61gL1UGbqsNRqR+L1XOV7GPMsxiWBY+m/1nnXYlIvAZ1NmWg==}
     peerDependencies:
-      elysia: '>= 0.5.12'
+      elysia: '>= 0.7.0'
     dependencies:
-      elysia: 0.6.19(@sinclair/typebox@0.31.14)
+      elysia: 0.7.2(@sinclair/typebox@0.31.15)
     dev: false
 
-  /@elysiajs/eden@0.6.1(elysia@0.6.19):
-    resolution: {integrity: sha512-QnWbRxYMgZ9WYKSOkWfVtHRmzWR/Fl4xpdzGtfF5MCmxXel3elXp9PxbC/IP5WRAZhRYM/EfcDpkTOeC0fcNoA==}
+  /@elysiajs/eden@0.7.0(elysia@0.7.2):
+    resolution: {integrity: sha512-IOxf0xnkLZ80x9NuJEslLYXVp8MLnvzLTRX6esgOm5mrpGr08V8Fxiu0AsD7/ahE7N6zacwKE2dhDLQl2Tz62g==}
     peerDependencies:
       '@sinclair/typebox': '*'
-      elysia: '>= 0.6.7'
+      elysia: '>= 0.7.0'
     peerDependenciesMeta:
       '@sinclair/typebox':
         optional: true
     dependencies:
-      elysia: 0.6.19(typescript@5.2.2)
-      superjson: 1.13.1
+      elysia: 0.7.2(typescript@5.2.2)
     dev: false
 
-  /@elysiajs/static@0.6.0(elysia@0.6.19):
-    resolution: {integrity: sha512-06M0J3HXQiX3BivJIMbL3WNXzudzQNHIPlU0JBZo2/gp8dX8GGOZbjIhyF6j4legEQE86omTBRHt2dUxb4yZZg==}
+  /@elysiajs/static@0.7.0(elysia@0.7.2):
+    resolution: {integrity: sha512-lhETwODT0XjsN3BtoqD4IRIMw3wXtzYjmHzlDIJj9adV6x2El4nMBgTgbhUl5MEP3+wwj52Sr2fm372+njaU/Q==}
     peerDependencies:
-      elysia: '>= 0.5.12'
+      elysia: '>= 0.7.0'
     dependencies:
-      elysia: 0.6.19(@sinclair/typebox@0.31.14)
+      elysia: 0.7.2(@sinclair/typebox@0.31.15)
     dev: false
 
-  /@elysiajs/swagger@0.6.1(elysia@0.6.19):
-    resolution: {integrity: sha512-1pV0iv2AoNcRt4cYH+I5WNN2Ie9u2sRjk8Zj+Ch3ObYjWXW3ZY0fd8iGraOkZ6uOu79PTCfNf1bsHP7wWgO3Xw==}
+  /@elysiajs/swagger@0.7.1(elysia@0.7.2):
+    resolution: {integrity: sha512-Qez9ApXt91HppIBbjAD66uKNiaHtKuv2/6xII3JCjbAGtxYphxLW/LSkEdNrUk93N7N+Ru5EkoZqWnaDBeVJHw==}
     peerDependencies:
-      elysia: '>= 0.6.7'
+      elysia: '>= 0.7.0'
     dependencies:
-      elysia: 0.6.19(@sinclair/typebox@0.31.14)
+      '@types/lodash.clonedeep': 4.5.7
+      elysia: 0.7.2(@sinclair/typebox@0.31.15)
       lodash.clonedeep: 4.5.0
+      openapi-types: 12.1.3
     dev: false
 
   /@esbuild/android-arm64@0.16.17:
@@ -1609,8 +1610,8 @@ packages:
     resolution: {integrity: sha512-0xd7qez0AQ+MbHatZTlI1gu5vkG8r7MYRUJAHPAHJBmGLs16zpkrpAVLvjQKQOqaXPDUBwOiJzNc00znHSCVBw==}
     dev: false
 
-  /@sinclair/typebox@0.31.14:
-    resolution: {integrity: sha512-2spk0ie6J/4r+nwb55OtBXUn5cZLF9S98fopIjuutBVoq8yLRNh+h8QvMkCjMu5gWBMnnZ/PUSXeHE3xGBPKLQ==}
+  /@sinclair/typebox@0.31.15:
+    resolution: {integrity: sha512-gheE0Z2QWB/EuUwirniP+vq17N0MdQ+9bKyy2lPJzcBin6piBxOrazTYOB18N+oeBwVVepAmlqqo9KbpSl9DOA==}
     dev: false
 
   /@sveltejs/adapter-auto@1.0.0(@sveltejs/kit@1.0.0):
@@ -1735,6 +1736,16 @@ packages:
 
   /@types/json5@0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: false
+
+  /@types/lodash.clonedeep@4.5.7:
+    resolution: {integrity: sha512-ccNqkPptFIXrpVqUECi60/DFxjNKsfoQxSQsgcBJCX/fuX1wgyQieojkcWH/KpE3xzLoWN/2k+ZeGqIN3paSvw==}
+    dependencies:
+      '@types/lodash': 4.14.198
+    dev: false
+
+  /@types/lodash@4.14.198:
+    resolution: {integrity: sha512-trNJ/vtMZYMLhfN45uLq4ShQSw0/S7xCTLLVM+WM1rmFpba/VS42jVUgaO3w/NOLiWR/09lnYk0yMaA/atdIsg==}
     dev: false
 
   /@types/node@17.0.12:
@@ -2725,6 +2736,11 @@ packages:
 
   /bun-types@1.0.1:
     resolution: {integrity: sha512-7NrXqhMIaNKmWn2dSWEQ50znMZqrN/5Z0NBMXvQTRu/+Y1CvoXRznFy0pnqLe024CeZgVdXoEpARNO1JZLAPGw==}
+    dev: false
+
+  /bun-types@1.0.2:
+    resolution: {integrity: sha512-yqBp2SX9cqr5/GReb56uCfM+YP+Hntx3XPjbqX1VJXqOBu+Yqw8iWRFLKFIsz9uEfykLgflhramQ8a5Jgo+Tlg==}
+    dev: true
 
   /busboy@1.6.0:
     resolution: {integrity: sha512-8SFQbg/0hQ9xy3UNTB0YEnsNBbWfhf7RtnzpL7TkBiTBRfrQ9Fxcnz7VJsleJpyp6rVLvXiuORqjlHi5q+PYuA==}
@@ -2968,17 +2984,13 @@ packages:
     resolution: {integrity: sha512-mWYvfOLrfEc996hlKcdABeIiPHUPC6DM2QYZdGGOvhOTbA3tjm2eBwqlJpoFdjC89NI4Qt6h0Pu06Mp+1Pj5OQ==}
     dev: true
 
+  /cookie-signature@1.2.1:
+    resolution: {integrity: sha512-78KWk9T26NhzXtuL26cIJ8/qNHANyJ/ZYrmEXFzUmhZdjpBv+DlWlOANRTGBt48YcyslsLrj0bMLFTmXvLRCOw==}
+    engines: {node: '>=6.6.0'}
+
   /cookie@0.5.0:
     resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
     engines: {node: '>= 0.6'}
-    dev: true
-
-  /copy-anything@3.0.5:
-    resolution: {integrity: sha512-yCEafptTtb4bk7GLEQoM8KVJpxAfdBJYaXyzQEgQQQgYrZiDp8SJmGKlYza6CYjEDNstAdNdKA3UuoULlEbS6w==}
-    engines: {node: '>=12.13'}
-    dependencies:
-      is-what: 4.1.15
-    dev: false
 
   /core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
@@ -3363,6 +3375,11 @@ packages:
       type-fest: 2.19.0
     dev: true
 
+  /dotenv@16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
+    dev: false
+
   /dotenv@16.3.1:
     resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
     engines: {node: '>=12'}
@@ -3380,16 +3397,13 @@ packages:
     resolution: {integrity: sha512-cOB0xcInjm+E5qIssHeXJ29BaUyWpMyFKT5RB3bsLENDheCja0wMkHJyiPl0NBE/VzDI7JDuNEQWhe6RitEUcw==}
     dev: true
 
-  /elysia@0.6.19(@sinclair/typebox@0.31.14):
-    resolution: {integrity: sha512-Kur/p0OG2D+dh6BEQ+KEjIW4cCnIv7ijBDFEVRvyFLYlKJgVMvA+koiGV715lFvE+EGPFbSEDdMzHfBihxza4A==}
+  /elysia@0.7.2(@sinclair/typebox@0.31.15):
+    resolution: {integrity: sha512-hA/3pjDviYHqdrh5M3U9Q1l0l4Y9SI4CYTu6kvCnMu1T4m5XIAsyEl8/PfLRrlC9LOl9bbBSuCkaMu5aVDQVjA==}
     peerDependencies:
-      '@elysiajs/fn': '*'
       '@sinclair/typebox': '>= 0.28.10'
       openapi-types: '>= 12.0.0'
       typescript: '>= 5.0.0'
     peerDependenciesMeta:
-      '@elysiajs/fn':
-        optional: true
       '@sinclair/typebox':
         optional: true
       openapi-types:
@@ -3397,21 +3411,21 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@sinclair/typebox': 0.31.14
+      '@sinclair/typebox': 0.31.15
+      cookie: 0.5.0
+      cookie-signature: 1.2.1
+      eventemitter3: 5.0.1
       fast-querystring: 1.1.2
       memoirist: 0.1.4
     dev: false
 
-  /elysia@0.6.19(typescript@5.2.2):
-    resolution: {integrity: sha512-Kur/p0OG2D+dh6BEQ+KEjIW4cCnIv7ijBDFEVRvyFLYlKJgVMvA+koiGV715lFvE+EGPFbSEDdMzHfBihxza4A==}
+  /elysia@0.7.2(typescript@5.2.2):
+    resolution: {integrity: sha512-hA/3pjDviYHqdrh5M3U9Q1l0l4Y9SI4CYTu6kvCnMu1T4m5XIAsyEl8/PfLRrlC9LOl9bbBSuCkaMu5aVDQVjA==}
     peerDependencies:
-      '@elysiajs/fn': '*'
       '@sinclair/typebox': '>= 0.28.10'
       openapi-types: '>= 12.0.0'
       typescript: '>= 5.0.0'
     peerDependenciesMeta:
-      '@elysiajs/fn':
-        optional: true
       '@sinclair/typebox':
         optional: true
       openapi-types:
@@ -3419,6 +3433,9 @@ packages:
       typescript:
         optional: true
     dependencies:
+      cookie: 0.5.0
+      cookie-signature: 1.2.1
+      eventemitter3: 5.0.1
       fast-querystring: 1.1.2
       memoirist: 0.1.4
       typescript: 5.2.2
@@ -3868,13 +3885,13 @@ packages:
       eslint: 8.28.0
     dev: true
 
-  /eslint-config-turbo@1.10.2(eslint@7.32.0):
-    resolution: {integrity: sha512-BaCnpn2GM0rTFLuTVplqY8n+3ttWcu/vEmfjJ2BNBVmwX6ALZoJQfL26ZW6VucRk0psTUJALeo+aPrf3VKEJXA==}
+  /eslint-config-turbo@1.10.14(eslint@7.32.0):
+    resolution: {integrity: sha512-ZeB+IcuFXy1OICkLuAplVa0euoYbhK+bMEQd0nH9+Lns18lgZRm33mVz/iSoH9VdUzl/1ZmFmoK+RpZc+8R80A==}
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
       eslint: 7.32.0
-      eslint-plugin-turbo: 1.10.2(eslint@7.32.0)
+      eslint-plugin-turbo: 1.10.14(eslint@7.32.0)
     dev: false
 
   /eslint-import-resolver-node@0.3.9:
@@ -4037,11 +4054,12 @@ packages:
       svelte: 3.54.0
     dev: true
 
-  /eslint-plugin-turbo@1.10.2(eslint@7.32.0):
-    resolution: {integrity: sha512-Kxsy4zlKLrGkEqZgcAQtu16YqU/g0mV1vYa9/VweF+MSnWWQsEzsJ1qlzTfXV6N9VqGmkuLiyWOA84sRUklOOg==}
+  /eslint-plugin-turbo@1.10.14(eslint@7.32.0):
+    resolution: {integrity: sha512-sBdBDnYr9AjT1g4lR3PBkZDonTrMnR4TvuGv5W0OiF7z9az1rI68yj2UHJZvjkwwcGu5mazWA1AfB0oaagpmfg==}
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
+      dotenv: 16.0.3
       eslint: 7.32.0
     dev: false
 
@@ -4251,6 +4269,9 @@ packages:
   /eventemitter3@4.0.7:
     resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
     dev: true
+
+  /eventemitter3@5.0.1:
+    resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
 
   /events@3.3.0:
     resolution: {integrity: sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==}
@@ -5034,11 +5055,6 @@ packages:
     resolution: {integrity: sha512-qctsuLZmIQ0+vSSMfoVvyFe2+GSEvnmZ2ezTup1SBse9+twCCeial6EEi3Nc2KFcf6+qz2FBPnjXsk8xhKSaPQ==}
     dependencies:
       call-bind: 1.0.2
-    dev: false
-
-  /is-what@4.1.15:
-    resolution: {integrity: sha512-uKua1wfy3Yt+YqsD6mTUEa2zSi3G1oPlqTflgaPJ7z63vUGN5pxFpnQfeSLMFnJDEsdvOtkp1rUWkYjB4YfhgA==}
-    engines: {node: '>=12.13'}
     dev: false
 
   /is-wsl@2.2.0:
@@ -6017,6 +6033,10 @@ packages:
       is-docker: 2.2.1
       is-wsl: 2.2.0
     dev: true
+
+  /openapi-types@12.1.3:
+    resolution: {integrity: sha512-N4YtSYJqghVu4iek2ZUvcN/0aqH1kRDuNqzcycDxhOUpg7GdvLa2F3DgS6yBNhInhv2r/6I0Flkn7CqL8+nIcw==}
+    dev: false
 
   /optionator@0.9.3:
     resolution: {integrity: sha512-JjCoypp+jKn1ttEFExxhetCKeJt9zhAgAve5FXHixTvFDW/5aEktX9bufBKLRRMdU7bNtpLfcGu94B3cdEJgjg==}
@@ -7363,13 +7383,6 @@ packages:
       postcss: 8.4.21
       postcss-selector-parser: 6.0.13
     dev: true
-
-  /superjson@1.13.1:
-    resolution: {integrity: sha512-AVH2eknm9DEd3qvxM4Sq+LTCkSXE2ssfh1t11MHMXyYXFQyQ1HLgVvV+guLTsaQnJU3gnaVo34TohHPulY/wLg==}
-    engines: {node: '>=10'}
-    dependencies:
-      copy-anything: 3.0.5
-    dev: false
 
   /supports-color@5.5.0:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}

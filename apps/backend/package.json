@@ -7,15 +7,15 @@
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
-    "@elysiajs/cors": "^0.6.0",
-    "@elysiajs/static": "^0.6.0",
-    "@elysiajs/swagger": "^0.6.1",
-    "@sinclair/typebox": "^0.31.14",
-    "elysia": "^0.6.19"
+    "@elysiajs/cors": "^0.7.0",
+    "@elysiajs/static": "^0.7.0",
+    "@elysiajs/swagger": "^0.7.1",
+    "@sinclair/typebox": "^0.31.15",
+    "elysia": "^0.7.2"
   },
   "devDependencies": {
     "@types/node": "^18.16.0",
-    "bun-types": "^1.0.1"
+    "bun-types": "^1.0.2"
   },
   "module": "src/index.ts",
   "bun-create": {
