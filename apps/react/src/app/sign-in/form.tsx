@@ -102,7 +102,7 @@ export default function Form() {
 
             <>
                 {fetched?.error && (
-                    <p className="text-red-500">{fetched.error.value}</p>
+                    <p className="text-red-500">{fetched.error.value.error}</p>
                 )}
             </>
 

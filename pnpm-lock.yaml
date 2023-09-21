@@ -23,19 +23,19 @@ importers:
     dependencies:
       '@elysiajs/cors':
         specifier: ^0.7.0
-        version: 0.7.0(elysia@0.7.2)
+        version: 0.7.0(elysia@0.7.6)
       '@elysiajs/static':
         specifier: ^0.7.0
-        version: 0.7.0(elysia@0.7.2)
+        version: 0.7.0(elysia@0.7.6)
       '@elysiajs/swagger':
         specifier: ^0.7.1
-        version: 0.7.1(elysia@0.7.2)
+        version: 0.7.1(elysia@0.7.6)
       '@sinclair/typebox':
         specifier: ^0.31.15
         version: 0.31.15
       elysia:
-        specifier: ^0.7.2
-        version: 0.7.2(@sinclair/typebox@0.31.15)
+        specifier: ^0.7.6
+        version: 0.7.6(@sinclair/typebox@0.31.15)
     devDependencies:
       '@types/node':
         specifier: ^18.16.0
@@ -225,8 +225,8 @@ importers:
   packages/libs:
     dependencies:
       '@elysiajs/eden':
-        specifier: 0.7.0
-        version: 0.7.0(elysia@0.7.2)
+        specifier: 0.7.1
+        version: 0.7.1(elysia@0.7.6)
     devDependencies:
       '@types/react':
         specifier: ^18.0.17
@@ -238,8 +238,8 @@ importers:
         specifier: workspace:*
         version: link:../../apps/backend
       elysia:
-        specifier: 0.7.2
-        version: 0.7.2(typescript@5.2.2)
+        specifier: 0.7.6
+        version: 0.7.6(typescript@5.2.2)
       eslint:
         specifier: ^7.32.0
         version: 7.32.0
@@ -621,16 +621,16 @@ packages:
       mime: 3.0.0
     dev: true
 
-  /@elysiajs/cors@0.7.0(elysia@0.7.2):
+  /@elysiajs/cors@0.7.0(elysia@0.7.6):
     resolution: {integrity: sha512-BOR7FyIdE5WE+LzFBSOY/yTnl8+56UiIaSanQr61gL1UGbqsNRqR+L1XOV7GPMsxiWBY+m/1nnXYlIvAZ1NmWg==}
     peerDependencies:
       elysia: '>= 0.7.0'
     dependencies:
-      elysia: 0.7.2(@sinclair/typebox@0.31.15)
+      elysia: 0.7.6(@sinclair/typebox@0.31.15)
     dev: false
 
-  /@elysiajs/eden@0.7.0(elysia@0.7.2):
-    resolution: {integrity: sha512-IOxf0xnkLZ80x9NuJEslLYXVp8MLnvzLTRX6esgOm5mrpGr08V8Fxiu0AsD7/ahE7N6zacwKE2dhDLQl2Tz62g==}
+  /@elysiajs/eden@0.7.1(elysia@0.7.6):
+    resolution: {integrity: sha512-t9IxXf+U5bI9T1Pc+NWr6OqcTS0rLvcWrlqX4tJto9FzWB44waFEughCUn/UtQ8mAG1CWWISCkzgV/M7Yi4R9Q==}
     peerDependencies:
       '@sinclair/typebox': '*'
       elysia: '>= 0.7.0'
@@ -638,24 +638,24 @@ packages:
       '@sinclair/typebox':
         optional: true
     dependencies:
-      elysia: 0.7.2(typescript@5.2.2)
+      elysia: 0.7.6(typescript@5.2.2)
     dev: false
 
-  /@elysiajs/static@0.7.0(elysia@0.7.2):
+  /@elysiajs/static@0.7.0(elysia@0.7.6):
     resolution: {integrity: sha512-lhETwODT0XjsN3BtoqD4IRIMw3wXtzYjmHzlDIJj9adV6x2El4nMBgTgbhUl5MEP3+wwj52Sr2fm372+njaU/Q==}
     peerDependencies:
       elysia: '>= 0.7.0'
     dependencies:
-      elysia: 0.7.2(@sinclair/typebox@0.31.15)
+      elysia: 0.7.6(@sinclair/typebox@0.31.15)
     dev: false
 
-  /@elysiajs/swagger@0.7.1(elysia@0.7.2):
+  /@elysiajs/swagger@0.7.1(elysia@0.7.6):
     resolution: {integrity: sha512-Qez9ApXt91HppIBbjAD66uKNiaHtKuv2/6xII3JCjbAGtxYphxLW/LSkEdNrUk93N7N+Ru5EkoZqWnaDBeVJHw==}
     peerDependencies:
       elysia: '>= 0.7.0'
     dependencies:
       '@types/lodash.clonedeep': 4.5.7
-      elysia: 0.7.2(@sinclair/typebox@0.31.15)
+      elysia: 0.7.6(@sinclair/typebox@0.31.15)
       lodash.clonedeep: 4.5.0
       openapi-types: 12.1.3
     dev: false
@@ -3397,8 +3397,8 @@ packages:
     resolution: {integrity: sha512-cOB0xcInjm+E5qIssHeXJ29BaUyWpMyFKT5RB3bsLENDheCja0wMkHJyiPl0NBE/VzDI7JDuNEQWhe6RitEUcw==}
     dev: true
 
-  /elysia@0.7.2(@sinclair/typebox@0.31.15):
-    resolution: {integrity: sha512-hA/3pjDviYHqdrh5M3U9Q1l0l4Y9SI4CYTu6kvCnMu1T4m5XIAsyEl8/PfLRrlC9LOl9bbBSuCkaMu5aVDQVjA==}
+  /elysia@0.7.6(@sinclair/typebox@0.31.15):
+    resolution: {integrity: sha512-l6pCa6vTkhJuKGmVD+9XFT6oUR5jiz0YhBAIVQaUI+Lu+BhOVpNJbu4AtCheogXm+eCsQ1D9Ud6YneNn9V5fuA==}
     peerDependencies:
       '@sinclair/typebox': '>= 0.28.10'
       openapi-types: '>= 12.0.0'
@@ -3419,8 +3419,8 @@ packages:
       memoirist: 0.1.4
     dev: false
 
-  /elysia@0.7.2(typescript@5.2.2):
-    resolution: {integrity: sha512-hA/3pjDviYHqdrh5M3U9Q1l0l4Y9SI4CYTu6kvCnMu1T4m5XIAsyEl8/PfLRrlC9LOl9bbBSuCkaMu5aVDQVjA==}
+  /elysia@0.7.6(typescript@5.2.2):
+    resolution: {integrity: sha512-l6pCa6vTkhJuKGmVD+9XFT6oUR5jiz0YhBAIVQaUI+Lu+BhOVpNJbu4AtCheogXm+eCsQ1D9Ud6YneNn9V5fuA==}
     peerDependencies:
       '@sinclair/typebox': '>= 0.28.10'
       openapi-types: '>= 12.0.0'
